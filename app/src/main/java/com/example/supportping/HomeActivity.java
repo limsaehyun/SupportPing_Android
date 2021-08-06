@@ -37,4 +37,15 @@ public class HomeActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MainData mainData = new MainData("안드 오류 고쳐줘", "1315 임세현", "512호 변기 위", "30명", "5억 원");
+        arrayList.add(mainData);
+
+        mainAdapter.notifyDataSetChanged();
+    }
+
 }

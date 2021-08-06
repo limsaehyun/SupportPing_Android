@@ -14,7 +14,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:background="#FFC107">
+            android:background="#FD969C">
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="match_parent"
@@ -58,14 +58,16 @@
                 android:layout_marginLeft="10dp"
                 android:text="무보수" />
         </LinearLayout>
+
         <Button
+            android:id="@+id/btn_check"
             android:layout_width="70dp"
             android:layout_height="30dp"
             android:layout_gravity="right"
             android:layout_marginRight="20dp"
+            android:gravity="center"
             android:text="확인"
-            android:textSize="10dp"
-            android:gravity="center"/>
+            android:textSize="10dp" />
     </LinearLayout>
 
 </LinearLayout>
