@@ -16,6 +16,7 @@
             android:layout_height="30dp"
             android:background="#FFC107">
             <TextView
+                android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/bmdohyun"
@@ -28,43 +29,41 @@
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:layout_height="30dp">
+
             <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1학년" />
+                android:text="1315 임세현" />
+
             <TextView
-                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_place"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3반" />
-            <TextView
                 android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="임세현" />
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="장소 : 512호" />
+
             <TextView
+                android:id="@+id/tv_personnel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="인원 : 1/5" />
+
             <TextView
+                android:id="@+id/tv_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="무보수"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginLeft="10dp"
+                android:text="무보수" />
         </LinearLayout>
         <Button
             android:layout_width="70dp"
             android:layout_height="30dp"
             android:layout_gravity="right"
             android:layout_marginRight="20dp"
-            android:text="참가"
+            android:text="확인"
             android:textSize="10dp"
             android:gravity="center"/>
     </LinearLayout>
