@@ -1,6 +1,7 @@
 package com.example.supportping;
 
 public class MainData {
+    String title;
     String nickname;
     String place;
     String personnel;
@@ -11,6 +12,10 @@ public class MainData {
         this.place = place;
         this.personnel = personnel;
         this.price = price;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public String getNickname() {
