@@ -1,38 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#FFC107">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/bmdohyun"
-            android:text="SupportPing"
-            android:layout_gravity="center"
-            android:textSize="20dp"/>
-    </FrameLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/iv_blueCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/el3" />
 
     <ImageView
-        android:id="@+id/ib_add"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
-        app:srcCompat="@drawable/add" />
+        android:id="@+id/iv_blackCircle"
+        android:layout_width="406dp"
+        android:layout_height="318dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/el1" />
 
+    <ImageView
+        android:id="@+id/iv_yellowCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/iv_blackCircle"
+        app:layout_constraintTop_toTopOf="@+id/iv_blackCircle"
+        app:srcCompat="@drawable/el2" />
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="136dp"
+        android:fontFamily="@font/bmdohyun"
+        android:text="안녕하세요\n    환영합니다"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_putEmail"
+        android:layout_width="303dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded"
+        android:ems="10"
+        android:hint="   Your Email"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.548" />
+
+    <EditText
+        android:background="@drawable/rounded"
+        android:id="@+id/et_putPw"
+        android:layout_width="303dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="   Password"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/et_putEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_putEmail"
+        app:layout_constraintTop_toBottomOf="@+id/et_putEmail" />
+
+    <TextView
+        android:id="@+id/tv_SIgnIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:fontFamily="@font/bmdohyun"
+        android:text="Sign in"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_signUp"
+        android:layout_width="78dp"
+        android:layout_height="9dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/rectangle" />
+
+    <ImageView
+        android:id="@+id/iv_forgetPw"
+        android:layout_width="159dp"
+        android:layout_height="9dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintStart_toEndOf="@+id/iv_signUp"
+        app:srcCompat="@drawable/rectangle2" />
+
+    <TextView
+        android:id="@+id/tv_signUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_signUp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_signUp"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="@+id/iv_signUp" />
+
+    <TextView
+        android:id="@+id/tv_forgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Forget Password"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_forgetPw"
+        app:layout_constraintEnd_toEndOf="@+id/iv_forgetPw"
+        app:layout_constraintStart_toStartOf="@+id/iv_forgetPw" />
+
+    <ImageButton
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:id="@+id/ib_next"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_SIgnIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_SIgnIn"
+        app:layout_constraintVertical_bias="0.478"
+        app:srcCompat="@drawable/circle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
