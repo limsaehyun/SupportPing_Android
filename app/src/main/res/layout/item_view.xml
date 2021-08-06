@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:orientation="vertical">
 
     <LinearLayout
+        android:background="@drawable/rounded4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/boderline">
+        android:orientation="vertical">
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:background="#FD969C">
+            android:background="@drawable/rounded3">
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="match_parent"
@@ -59,15 +60,30 @@
                 android:text="무보수" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_check"
-            android:layout_width="70dp"
-            android:layout_height="30dp"
-            android:layout_gravity="right"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
-            android:text="확인"
-            android:textSize="10dp" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:id="@+id/imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/flowers" />
+
+            <Button
+                android:id="@+id/btn_check"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:textColor="@color/black"
+                android:backgroundTint="#FFEB3B"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="확인"
+                android:textSize="10dp" />
+        </FrameLayout>
+
     </LinearLayout>
 
 </LinearLayout>
