@@ -40,6 +40,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
         holder.tv_nickname.setText(arraylist.get(position).getNickname());
         holder.tv_personnel.setText(arraylist.get(position).getPersonnel());
         holder.tv_place.setText(arraylist.get(position).getPlace());
+        holder.tv_price.setText(arraylist.get(position).getPrice());
         holder.tv_personnel.setText(arraylist.get(position).getPersonnel());
 
         holder.btn_check.setOnClickListener(new View.OnClickListener() {

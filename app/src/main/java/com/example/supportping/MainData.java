@@ -7,7 +7,8 @@ public class MainData {
     String personnel;
     String price;
 
-    public MainData(String nickname, String place, String personnel, String price) {
+    public MainData(String title, String nickname, String place, String personnel, String price) {
+        this.title = title;
         this.nickname = nickname;
         this.place = place;
         this.personnel = personnel;
