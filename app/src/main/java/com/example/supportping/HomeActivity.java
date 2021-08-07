@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
@@ -34,6 +35,13 @@ public class HomeActivity extends AppCompatActivity {
         mainAdapter = new MainAdapter(arrayList, getApplicationContext());
         recyclerView.setAdapter(mainAdapter);
 
+        ib_add = (ImageButton) findViewById(R.id.ib_add);
+        ib_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 현명이 만든 페이지
+            }
+        });
 
 
     }
