@@ -54,7 +54,10 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
-    <ImageView
+    <ImageButton
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
         android:id="@+id/ib_add"
         android:layout_width="50dp"
         android:layout_height="50dp"
