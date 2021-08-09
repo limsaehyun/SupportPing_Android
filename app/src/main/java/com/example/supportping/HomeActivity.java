@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -39,7 +40,7 @@ public class HomeActivity extends AppCompatActivity {
         ib_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 현명이 만든 페이지
+                startActivity(new Intent(HomeActivity.this, PostActivity.class));
             }
         });
 
