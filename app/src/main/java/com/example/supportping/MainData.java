@@ -1,11 +1,14 @@
 package com.example.supportping;
 
 public class MainData {
+
+    // 게시물 관련
     String title;
     String nickname;
     String place;
     String personnel;
     String price;
+
 
     public MainData(String title, String nickname, String place, String personnel, String price) {
         this.title = title;
