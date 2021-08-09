@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "floor">
+        <item>
+            1층
+        </item>
+        <item>
+            2층
+        </item>
+        <item>
+            3층
+        </item>
+        <item>
+            4층
+        </item>
+        <item>
+            5층
+        </item>
+
+
+    </string-array>
+
+    <string-array name = "room">
+        <item>
+            가온실
+        </item>
+        <item>
+            나온실
+        </item>
+        <item>
+            다온실
+        </item>
+        <item>
+            라온실
+        </item>
+        <item>
+            사감실
+        </item>
+
+
+        <item>
+            독서실
+        </item>
+        <item>
+            휴게실
+        </item>
+        <item>
+            헬스장
+        </item>
+        <item>
+            01호
+        </item>
+        <item>
+            02호
+        </item>
+
+
+        <item>
+            03호
+        </item>
+        <item>
+            04호
+        </item>
+        <item>
+            05호
+        </item>
+        <item>
+            06호
+        </item>
+        <item>
+            07호
+
+
+        </item>
+        <item>
+            08호
+        </item>
+        <item>
+            09호
+        </item>
+        <item>
+            10호
+        </item><item>
+            11호
+        </item>
+        <item>
+            12호
+        </item>
+
+
+        <item>
+            13호
+        </item>
+        <item>
+            14호
+        </item>
+        <item>
+            15호
+        </item>
+        <item>
+            16호
+        </item>
+        <item>
+            17호
+        </item>
+
+
+        <item>
+            18호
+        </item>
+        <item>
+            19호
+        </item>
+        <item>
+            20호
+        </item><item>
+            21호
+        </item>
+        <item>
+            22호
+        </item>
+        <item>
+            23호
+        </item>
+        <item>
+            24호
+        </item>
+        <item>
+            25호
+        </item>
+        <item>
+            26호
+        </item>
+        <item>
+            27호
+        </item>
+        <item>
+            28호
+        </item>
+        <item>
+            29호
+        </item>
+        <item>
+            30호
+        </item>
+
+    </string-array>
+
+    <string-array name = "person">
+        <item>
+            1명
+        </item>
+        <item>
+            2명
+        </item>
+        <item>
+            3명
+        </item>
+        <item>
+            4명
+        </item>
+        <item>
+            5명
+        </item>
+        <item>
+            6명
+        </item>
+        <item>
+            7명
+        </item>
+
+    </string-array>
+
+</resources>
