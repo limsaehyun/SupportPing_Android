@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="7.5dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_arrow_back_24">
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="-0.5dp"
+            android:fontFamily="@font/bmhanna"
+            android:text="도움 요청 글쓰기"
+            android:textColor="@color/black"
+            android:textSize="30dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-1.5dp"
+            android:text="완료"
+            android:textColor="#E66363"
+            android:textSize="25dp">
+        </TextView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#70040303">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="#00FFFFFF"
+            android:hint="  제목"
+            android:textSize="20dp">
+        </EditText>
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="#70040303">
+        </View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_result1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="15dp"></TextView>
+        <TextView
+            android:id="@+id/tv_result2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp">
+        </TextView>
+        <Spinner
+            android:id="@+id/sp_floor"
+            android:layout_width="115dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:entries="@array/floor"
+            android:spinnerMode="dropdown">
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/sp_location"
+            android:layout_width="128dp"
+            android:layout_height="60dp"
+            android:entries="@array/room"
+            android:spinnerMode="dialog"></Spinner>
+    </LinearLayout>
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#70040303">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text="최소 인원"
+            android:textColor="#70040303"
+            android:textSize="22dp">
+        </TextView>
+
+        <Spinner
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="35dp"
+            android:entries="@array/person"
+            android:spinnerMode="dropdown">
+        </Spinner>
+    </LinearLayout>
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#70040303">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="330dp"
+            android:layout_gravity="center"
+            android:hint="게시글 내용을 작성해주세요."
+            android:background="@drawable/et_line"
+            android:ems="10"
+            android:gravity="top">
+        </EditText>
+    </LinearLayout>
+</LinearLayout>
