@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SupportPing">
-        <activity android:name=".AccountActivity"></activity>
+        <activity android:name=".PostActivity"></activity>
+        <activity android:name=".MyPageActivity"></activity>
+        <activity android:name=".AccountActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" />
     </application>
 
 </manifest>
