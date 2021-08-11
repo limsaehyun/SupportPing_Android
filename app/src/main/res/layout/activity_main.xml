@@ -45,12 +45,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_putEmail"
+        android:id="@+id/et_putID"
         android:layout_width="303dp"
         android:layout_height="60dp"
         android:background="@drawable/rounded"
         android:ems="10"
-        android:hint="   Your Email"
+        android:hint="   Your ID"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,17 +60,17 @@
 
     <EditText
         android:background="@drawable/rounded"
-        android:id="@+id/et_putPw"
+        android:id="@+id/et_putPW"
         android:layout_width="303dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="   Password"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/et_putEmail"
+        app:layout_constraintEnd_toEndOf="@+id/et_putID"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/et_putEmail"
-        app:layout_constraintTop_toBottomOf="@+id/et_putEmail" />
+        app:layout_constraintStart_toStartOf="@+id/et_putID"
+        app:layout_constraintTop_toBottomOf="@+id/et_putID" />
 
     <TextView
         android:id="@+id/tv_SIgnIn"

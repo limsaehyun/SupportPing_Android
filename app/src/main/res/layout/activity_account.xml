@@ -54,14 +54,14 @@
         app:layout_constraintVertical_bias="0.466" />
 
     <EditText
-        android:textColorHint="@color/white"
-        android:id="@+id/et_signUpEmail"
+        android:id="@+id/et_signUpID"
         android:layout_width="303dp"
         android:layout_height="50dp"
-        android:background="@drawable/rounded2"
         android:layout_marginTop="15dp"
-        android:hint="   Your Email"
+        android:background="@drawable/rounded2"
+        android:hint="   Your ID"
         android:inputType="textPersonName"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/et_signUpName"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/et_signUpName"
@@ -76,10 +76,10 @@
         android:layout_marginTop="15dp"
         android:hint="   Password"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/et_signUpEmail"
+        app:layout_constraintEnd_toEndOf="@+id/et_signUpID"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/et_signUpEmail"
-        app:layout_constraintTop_toBottomOf="@+id/et_signUpEmail" />
+        app:layout_constraintStart_toStartOf="@+id/et_signUpID"
+        app:layout_constraintTop_toBottomOf="@+id/et_signUpID" />
 
     <TextView
         android:id="@+id/tv_signUp"
