@@ -23,16 +23,19 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tv_signUpButton;
-    ImageButton ib_next;
+    private TextView tv_signUpButton;
+    private ImageButton ib_next;
 
-    EditText et_putID;
-    EditText et_putPW;
+    private EditText et_putID;
+    private EditText et_putPW;
 
-    RetrofitClient retrofitClient;
-    ServerAPI serverAPI;
+    private RetrofitClient retrofitClient;
+    private ServerAPI serverAPI;
 
-    String token;
+    private String token;
+
+    public static String username;
+    public static String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Login() {
-        String username = et_putID.getText().toString();
-        String password = et_putPW.getText().toString();
+        username = et_putID.getText().toString();
+        password = et_putPW.getText().toString();
 
         hideKeyboard();
 
