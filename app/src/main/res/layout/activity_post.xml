@@ -13,6 +13,7 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/back"
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:layout_marginTop="7.5dp"
@@ -34,6 +35,7 @@
         </TextView>
 
         <TextView
+            android:id="@+id/PostButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -56,6 +58,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/title"
             android:layout_width="320dp"
             android:layout_height="70dp"
             android:layout_gravity="center"
@@ -77,33 +80,38 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/tv_result1"
+            android:id="@+id/NowLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:textSize="15dp"></TextView>
-        <TextView
-            android:id="@+id/tv_result2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="20dp"
+            android:text=""
             android:textSize="15dp">
         </TextView>
         <Spinner
-            android:id="@+id/sp_floor"
-            android:layout_width="115dp"
+            android:id="@+id/floor"
+            android:layout_width="95dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="8dp"
             android:entries="@array/floor"
             android:spinnerMode="dropdown">
         </Spinner>
 
-        <Spinner
-            android:id="@+id/sp_location"
-            android:layout_width="128dp"
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="90dp"
             android:layout_height="60dp"
-            android:entries="@array/room"
-            android:spinnerMode="dialog"></Spinner>
+            android:hint="위치 입력">
+        </EditText>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#F16A58"
+            android:text="입력"
+            android:layout_marginLeft="10dp"
+            android:textSize="16dp" />
     </LinearLayout>
 
     <View
@@ -128,11 +136,23 @@
             android:textSize="22dp">
         </TextView>
 
+        <TextView
+            android:id="@+id/people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text=""
+            android:textColor="#70040303"
+            android:textSize="18dp">
+        </TextView>
+
         <Spinner
-            android:layout_width="180dp"
+            android:id="@+id/person"
+            android:layout_width="160dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="25dp"
             android:entries="@array/person"
             android:spinnerMode="dropdown">
         </Spinner>
@@ -152,6 +172,7 @@
         android:layout_marginTop="15dp">
 
         <EditText
+            android:id="@+id/content"
             android:layout_width="320dp"
             android:layout_height="330dp"
             android:layout_gravity="center"
