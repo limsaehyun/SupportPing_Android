@@ -22,6 +22,6 @@ public interface ServerAPI {
     @GET("board") // 전체 조회
     Call<ServerResponse> inquiry();
 
-    @GET("users/post")
-    Call<ServerRequest> createPost(@Body ServerRequest serverRequest);
+    @POST("users/post") // 게시글 추가
+    Call<ServerRequest> createPost(@Header("Authorization") String token, @Body ServerRequest serverRequest);
 }
