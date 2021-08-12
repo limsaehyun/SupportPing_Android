@@ -6,35 +6,54 @@ public class MainData {
     String title;
     String nickname;
     String place;
-    String personnel;
-    String price;
+    String mp;
+    String id;
 
-
-    public MainData(String title, String nickname, String place, String personnel, String price) {
+    public MainData(String title, String nickname, String place, String mp, String id) {
         this.title = title;
         this.nickname = nickname;
         this.place = place;
-        this.personnel = personnel;
-        this.price = price;
+        this.mp = mp;
+        this.id = id;
     }
 
     public String getTitle() {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getNickname() {
         return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     public String getPlace() {
         return place;
     }
 
-    public String getPersonnel() {
-        return personnel;
+    public void setPlace(String place) {
+        this.place = place;
     }
 
-    public String getPrice() {
-        return price;
+    public String getMp() {
+        return mp;
+    }
+
+    public void setMp(String mp) {
+        this.mp = mp;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
