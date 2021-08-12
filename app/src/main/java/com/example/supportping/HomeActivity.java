@@ -46,8 +46,6 @@ public class HomeActivity extends AppCompatActivity {
 
     TextView tv_id;
 
-    TextView myPage;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

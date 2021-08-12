@@ -97,8 +97,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseLogin> call, Response<ResponseLogin> response) {
 
-                System.out.println("성공");
-
                 if (response.isSuccessful() && response.body() != null) {
 
                     ResponseLogin result = response.body();
