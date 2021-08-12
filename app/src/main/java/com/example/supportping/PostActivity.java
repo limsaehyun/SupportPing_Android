@@ -106,15 +106,20 @@ public class PostActivity extends AppCompatActivity {
         String title = this.title.getText().toString();
         String content = this.content.getText().toString();
         String nowLocation = NowLocation.getText().toString();
-        String people = this.people.getText().toString();
+        Integer people = Integer.parseInt(this.people.getText().toString());
 
         ServerAPI serverAPI = ApiProvider.getInstance().create(ServerAPI.class);
         ServerRequest post = new ServerRequest(title, content, nowLocation, people);
+
         Call<ServerRequest> call = serverAPI.createPost(MainActivity.token, post);
         call.enqueue(new Callback<ServerRequest>() {
             @Override
             public void onResponse(Call<ServerRequest> call, Response<ServerRequest> response) {
-                System.out.println("성공");
+                if(response.code() == 200) {
+                    System.out.println("성공");
+                } else {
+                    System.out.println("코드" + response.code());
+                }
             }
 
             @Override
