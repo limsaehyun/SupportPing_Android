@@ -1,16 +1,18 @@
 package com.example.supportping;
 
+import androidx.annotation.NonNull;
+
 public class ServerRequest {
     private String title;
     private String content;
-    private String NowLocation;
-    private String people;
+    private String place;
+    private String mp;
 
-    public ServerRequest(String title, String content, String nowLocation, String people) {
+    public ServerRequest(String title, String content, String place, String mp) {
         this.title = title;
         this.content = content;
-        NowLocation = nowLocation;
-        this.people = people;
+        this.place = place;
+        this.mp = mp;
     }
 
     public String getTitle() {
@@ -29,19 +31,19 @@ public class ServerRequest {
         this.content = content;
     }
 
-    public String getNowLocation() {
-        return NowLocation;
+    public String getPlace() {
+        return place;
     }
 
-    public void setNowLocation(String nowLocation) {
-        NowLocation = nowLocation;
+    public void setPlace(String place) {
+        this.place = place;
     }
 
-    public String getPeople() {
-        return people;
+    public String getMp() {
+        return mp;
     }
 
-    public void setPeople(String people) {
-        this.people = people;
+    public void setMp(String mp) {
+        this.mp = mp;
     }
 }
