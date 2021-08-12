@@ -1,6 +1,7 @@
 package com.example.supportping;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,14 +11,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.badge.BadgeUtils;
-
 import java.util.ArrayList;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHolder> {
 
     Context Ctx;
     ArrayList<MainData> arraylist;
+    public static int pos;
 
     public MainAdapter(ArrayList<MainData> arraylist, Context Ctx) { // 생성자
         this.arraylist = arraylist;
@@ -38,15 +38,15 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
 
         holder.tv_title.setText(arraylist.get(position).getTitle());
         holder.tv_nickname.setText(arraylist.get(position).getNickname());
-        holder.tv_personnel.setText(arraylist.get(position).getPersonnel());
         holder.tv_place.setText(arraylist.get(position).getPlace());
-        holder.tv_price.setText(arraylist.get(position).getPrice());
-        holder.tv_personnel.setText(arraylist.get(position).getPersonnel());
+        holder.tv_mp.setText("인원 : " + arraylist.get(position).getMp());
+        holder.tv_id.setText(arraylist.get(position).getId());
 
         holder.btn_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 현명히 뷰 자세히 보기
+                pos = Integer.parseInt(arraylist.get(position).getId());
+                v.getContext().startActivity(new Intent(v.getContext(), SeeActivity.class));
             }
         });
     }
@@ -69,18 +69,18 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
 
         protected TextView tv_title;
         protected TextView tv_nickname;
-        protected TextView tv_personnel;
+        protected TextView tv_mp;
         protected TextView tv_place;
-        protected TextView tv_price;
+        protected TextView tv_id;
         protected Button btn_check;
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
             this.tv_title = (TextView) itemView.findViewById(R.id.tv_title);
             this.tv_nickname = (TextView) itemView.findViewById(R.id.tv_nickname);
-            this.tv_personnel = (TextView) itemView.findViewById(R.id.tv_personnel);
             this.tv_place = (TextView) itemView.findViewById(R.id.tv_place);
-            this.tv_price = (TextView) itemView.findViewById(R.id.tv_price);
+            this.tv_mp = (TextView) itemView.findViewById(R.id.tv_personnel);
+            this.tv_id = (TextView) itemView.findViewById(R.id.tv_ID);
             this.btn_check = (Button) itemView.findViewById(R.id.btn_check);
         }
     }
