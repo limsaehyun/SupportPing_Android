@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private RetrofitClient retrofitClient;
     private ServerAPI serverAPI;
 
-    private String token;
+    public static String token;
 
     public static String username;
     public static String password;
