@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/myPage"
+            android:icon="@drawable/ic_launcher_foreground"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="마이페이지"
+            />
+        <item
+            android:id="@+id/joinParty"
+            android:icon="@drawable/ic_launcher_foreground"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="참여한 파티"
+            />
+        <item
+            android:id="@+id/makeParty"
+            android:icon="@drawable/ic_launcher_foreground"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="파티 만들기"
+            />
+    </group>
+</menu>
