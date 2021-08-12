@@ -129,31 +129,4 @@ public class PostActivity extends AppCompatActivity {
             }
         });
     }
-
-//    private void editPost() {
-//        String data;
-//        String title;
-//        String content;
-//        String nowLocation;
-//        String people;
-//        PostButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                ServerAPI serverAPI = ApiProvider.getInstance().create(ServerAPI.class);
-//                ServerResponse id = new ServerResponse();
-//                Call<ServerResponse> call = serverAPI.createPost()
-//                call.enqueue(new Callback<ServerResponse>() {
-//                    @Override
-//                    public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
-//                        Log.d("결과", "성공");
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<ServerResponse> call, Throwable t) {
-//                        Log.d("실패", "실패");
-//                    }
-//                });
-//            }
-//        });
-//    }
 }
