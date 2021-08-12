@@ -1,6 +1,8 @@
 package com.example.supportping;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,11 +12,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
@@ -42,6 +46,8 @@ public class HomeActivity extends AppCompatActivity {
 
     TextView tv_id;
 
+    TextView myPage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +55,23 @@ public class HomeActivity extends AppCompatActivity {
 
         System.out.println("토큰" + MainActivity.token);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                item.setChecked(true);
+                drawerLayout.closeDrawer(GravityCompat.START);
+
+                int id = item.getItemId();
+
+                if(id == R.id.myPage) {
+                    startActivity(new Intent(HomeActivity.this, MyPageActivity.class));
+                }
+
+                return true;
+            }
+        });
 
         ib_menu = (ImageButton) findViewById(R.id.ib_menu);
         ib_menu.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +97,7 @@ public class HomeActivity extends AppCompatActivity {
         ib_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(HomeActivity.this, PostActivity.class));
+                startActivity(new Intent(HomeActivity.this, PostActivity.class));
             }
         });
 
