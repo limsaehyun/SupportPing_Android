@@ -148,25 +148,25 @@
 
     <string-array name = "person">
         <item>
-            1명
+            1
         </item>
         <item>
-            2명
+            2
         </item>
         <item>
-            3명
+            3
         </item>
         <item>
-            4명
+            4
         </item>
         <item>
-            5명
+            5
         </item>
         <item>
-            6명
+            6
         </item>
         <item>
-            7명
+            7
         </item>
 
     </string-array>
