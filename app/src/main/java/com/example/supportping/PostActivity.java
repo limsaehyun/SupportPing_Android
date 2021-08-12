@@ -25,7 +25,8 @@ public class PostActivity extends AppCompatActivity {
     private static View PostButton;
     private Spinner floor;
     private EditText location;
-    private TextView NowLocation, people;
+    private TextView NowLocation;
+    TextView people;
     private Spinner person;
     private Button button;
     private ImageButton back;
@@ -42,7 +43,9 @@ public class PostActivity extends AppCompatActivity {
         location = (EditText) findViewById(R.id.location);
         NowLocation = (TextView) findViewById(R.id.NowLocation);
         person = (Spinner) findViewById(R.id.person);
+
         people = (TextView) findViewById(R.id.people);
+
         button = (Button) findViewById(R.id.button);
         PostButton = (TextView) findViewById(R.id.PostButton);
         back = (ImageButton)findViewById(R.id.back);
@@ -95,6 +98,7 @@ public class PostActivity extends AppCompatActivity {
         PostButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("test");
                 pushPost();
             }
         });
@@ -106,7 +110,7 @@ public class PostActivity extends AppCompatActivity {
         String title = this.title.getText().toString();
         String content = this.content.getText().toString();
         String nowLocation = NowLocation.getText().toString();
-        Integer people = Integer.parseInt(this.people.getText().toString());
+        String people = this.people.getText().toString();
 
         ServerAPI serverAPI = ApiProvider.getInstance().create(ServerAPI.class);
         ServerRequest post = new ServerRequest(title, content, nowLocation, people);
@@ -116,15 +120,12 @@ public class PostActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ServerRequest> call, Response<ServerRequest> response) {
                 if(response.code() == 200) {
-                    System.out.println("성공");
                 } else {
-                    System.out.println("코드" + response.code());
                 }
             }
 
             @Override
             public void onFailure(Call<ServerRequest> call, Throwable t) {
-                System.out.println("실패");
             }
         });
     }
