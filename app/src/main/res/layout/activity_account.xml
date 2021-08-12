@@ -41,7 +41,7 @@
 
     <EditText
         android:textColorHint="@color/white"
-        android:id="@+id/et_signUpName"
+        android:id="@+id/et_RegisterName"
         android:layout_width="303dp"
         android:layout_height="50dp"
         android:background="@drawable/rounded2"
@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.466" />
 
     <EditText
-        android:id="@+id/et_signUpID"
+        android:id="@+id/et_RegisterId"
         android:layout_width="303dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
@@ -62,24 +62,24 @@
         android:hint="   Your ID"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/et_signUpName"
+        app:layout_constraintEnd_toEndOf="@+id/et_RegisterName"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/et_signUpName"
-        app:layout_constraintTop_toBottomOf="@+id/et_signUpName" />
+        app:layout_constraintStart_toStartOf="@+id/et_RegisterName"
+        app:layout_constraintTop_toBottomOf="@+id/et_RegisterName" />
 
     <EditText
         android:textColorHint="@color/white"
-        android:id="@+id/et_signUpPassword"
+        android:id="@+id/et_RegisterPw"
         android:layout_width="303dp"
         android:layout_height="50dp"
         android:background="@drawable/rounded2"
         android:layout_marginTop="15dp"
         android:hint="   Password"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/et_signUpID"
+        app:layout_constraintEnd_toEndOf="@+id/et_RegisterId"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/et_signUpID"
-        app:layout_constraintTop_toBottomOf="@+id/et_signUpID" />
+        app:layout_constraintStart_toStartOf="@+id/et_RegisterId"
+        app:layout_constraintTop_toBottomOf="@+id/et_RegisterId" />
 
     <TextView
         android:id="@+id/tv_signUp"
@@ -92,10 +92,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/et_signUpPassword" />
+        app:layout_constraintStart_toStartOf="@+id/et_RegisterPw" />
 
     <ImageButton
-        android:id="@+id/ib_blackCircle"
+        android:id="@+id/ib_Register"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginEnd="52dp"
