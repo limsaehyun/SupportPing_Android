@@ -7,12 +7,21 @@ public class ServerRequest {
     private String content;
     private String place;
     private String mp;
+    private String board_id;
 
     public ServerRequest(String title, String content, String place, String mp) {
         this.title = title;
         this.content = content;
         this.place = place;
         this.mp = mp;
+    }
+
+    public String getBoard_id() {
+        return board_id;
+    }
+
+    public void setBoard_id(String board_id) {
+        this.board_id = board_id;
     }
 
     public String getTitle() {
