@@ -114,9 +114,15 @@ public class HomeActivity extends AppCompatActivity {
             String startpp = jsonObject.get("pp").toString();
             String startmp = jsonObject.get("mp").toString();
 
-            System.out.println("테스트2" + startContent);
+            int Id = Integer.parseInt(startId);
+            PostData.id[Id] = startId;
+            PostData.title[Id] = startTitle;
+            PostData.content[Id] = startContent;
+            PostData.place[Id] = startPlace;
+            PostData.pp[Id] = startpp;
+            PostData.mp[Id] = startmp;
 
-            MainData mainData = new MainData(startTitle, startContent, startPlace, startmp, "10");
+            MainData mainData = new MainData(startTitle, "1315 임세현", startPlace, startmp, startId);
             arrayList.add(mainData);
 
             mainAdapter.notifyDataSetChanged();
