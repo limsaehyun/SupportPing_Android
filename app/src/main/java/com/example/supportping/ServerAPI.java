@@ -10,6 +10,7 @@ import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.Call;
+import retrofit2.http.Path;
 
 public interface ServerAPI {
 
@@ -24,4 +25,8 @@ public interface ServerAPI {
 
     @POST("user/post") // 게시글 추가
     Call<ServerRequest> createPost(@Header("Authorization") String token, @Body ServerRequest serverRequest);
+
+    @POST("user/enter/{board-id}") // 파티 참여
+    Call<ServerRequest> joinPost(@Header("Authorization") String token, @Path("board-id") int board_id);
+
 }
