@@ -6,9 +6,9 @@ public class ServerRequest {
     private String title;
     private String content;
     private String place;
-    private String mp;
+    private Integer mp;
 
-    public ServerRequest(String title, String content, String place, String mp) {
+    public ServerRequest(String title, String content, String place, Integer mp) {
         this.title = title;
         this.content = content;
         this.place = place;
@@ -39,11 +39,11 @@ public class ServerRequest {
         this.place = place;
     }
 
-    public String getMp() {
+    public Integer getMp() {
         return mp;
     }
 
-    public void setMp(String mp) {
+    public void setMp(Integer mp) {
         this.mp = mp;
     }
 }
