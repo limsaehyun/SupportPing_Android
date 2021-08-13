@@ -19,6 +19,7 @@ public class SeeActivity extends AppCompatActivity {
     TextView tv_seeContent;
     TextView tv_seePlace;
     TextView tv_seeppmp;
+    TextView tv_name;
     ImageButton ib_join;
 
     static int[] status = new int[10000];
@@ -48,11 +49,13 @@ public class SeeActivity extends AppCompatActivity {
         tv_seeContent = (TextView) findViewById(R.id.tv_seeContent);
         tv_seePlace = (TextView) findViewById(R.id.tv_seePlace);
         tv_seeppmp = (TextView) findViewById(R.id.tv_seeppmp);
+        tv_name = (TextView) findViewById(R.id.tv_name);
 
         tv_seeTitle.setText(PostData.title[MainAdapter.pos]);
         tv_seeContent.setText(PostData.content[MainAdapter.pos]);
         tv_seePlace.setText(PostData.place[MainAdapter.pos]);
         tv_seeppmp.setText(PostData.pp[MainAdapter.pos] + " / " + PostData.mp[MainAdapter.pos]);
+        tv_name.setText(PostData.name[MainAdapter.pos]);
     }
 
     private void PartyJoin() {
