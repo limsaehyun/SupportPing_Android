@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.List;
@@ -98,7 +99,6 @@ public class PostActivity extends AppCompatActivity {
         PostButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("test");
                 pushPost();
             }
         });
@@ -119,13 +119,14 @@ public class PostActivity extends AppCompatActivity {
         call.enqueue(new Callback<ServerRequest>() {
             @Override
             public void onResponse(Call<ServerRequest> call, Response<ServerRequest> response) {
-                if(response.code() == 200) {
-                } else {
-                }
+                Toast.makeText(PostActivity.this, "게시글 등록이 완료되었습니다!", Toast.LENGTH_SHORT).show();
+                finish();
             }
 
             @Override
             public void onFailure(Call<ServerRequest> call, Throwable t) {
+                Toast.makeText(PostActivity.this, "예기치 못한 오류로 인해 게시글 등록에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }
