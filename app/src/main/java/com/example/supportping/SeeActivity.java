@@ -21,6 +21,8 @@ public class SeeActivity extends AppCompatActivity {
     TextView tv_seeppmp;
     TextView tv_name;
     ImageButton ib_join;
+    TextView tv_join;
+    static int i = 0;
 
     static int[] status = new int[10000];
 
@@ -28,6 +30,8 @@ public class SeeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_see);
+
+        tv_join = (TextView) findViewById(R.id.tv_Join);
 
         ib_back = (ImageButton) findViewById(R.id.ib_Back);
         ib_back.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +63,9 @@ public class SeeActivity extends AppCompatActivity {
     }
 
     private void PartyJoin() {
-        if(status[MainAdapter.pos] == 0) {
+        if(i == 0) {
+            i = 1;
+            tv_join.setText("탈퇴 하기");
             ServerAPI serverAPI = ApiProvider.getInstance().create(ServerAPI.class);
             serverAPI.joinPost(MainActivity.token, MainAdapter.pos).enqueue(new Callback<ServerRequest>() {
                 @Override
@@ -70,10 +76,21 @@ public class SeeActivity extends AppCompatActivity {
                 public void onFailure(Call<ServerRequest> call, Throwable t) {
                 }
             });
-            status[MainAdapter.pos] = 1;
             Toast.makeText(SeeActivity.this, "성공적으로 파티에 참여하셨습니다!", Toast.LENGTH_SHORT).show();
-        } else if (status[MainAdapter.pos] == 1){
-            Toast.makeText(SeeActivity.this, "중복 참여는 불가능합니다.", Toast.LENGTH_SHORT).show();
+        }
+        else if(i == 1) {
+            i = 0;
+            tv_join.setText("참여 하기");
+            ServerAPI serverAPI = ApiProvider.getInstance().create(ServerAPI.class);
+            serverAPI.enterDelete(MainActivity.token, MainAdapter.pos).enqueue(new Callback<ServerResponse>() {
+                @Override
+                public void onResponse(Call call, Response response) {
+                }
+                @Override
+                public void onFailure(Call call, Throwable t) {
+                }
+            });
+            Toast.makeText(SeeActivity.this,"성공적으로 파티에서 탈퇴 하셨습니다!", Toast.LENGTH_SHORT).show();
         }
     }
 }
