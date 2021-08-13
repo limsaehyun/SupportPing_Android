@@ -40,13 +40,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:textColorHint="@color/white"
         android:id="@+id/et_RegisterName"
         android:layout_width="303dp"
         android:layout_height="50dp"
         android:background="@drawable/rounded2"
-        android:hint="   Name"
+        android:hint="   Name (including student num)"
         android:inputType="textPersonName"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
