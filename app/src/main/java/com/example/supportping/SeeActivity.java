@@ -22,9 +22,6 @@ public class SeeActivity extends AppCompatActivity {
     TextView tv_name;
     ImageButton ib_join;
     TextView tv_join;
-    static int i = 0;
-
-    static int[] status = new int[10000];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +60,8 @@ public class SeeActivity extends AppCompatActivity {
     }
 
     private void PartyJoin() {
-        if(i == 0) {
-            i = 1;
+        if(PostData.overlap[MainAdapter.pos] == 0) {
+            PostData.overlap[MainAdapter.pos] = 1;
             tv_join.setText("탈퇴 하기");
             ServerAPI serverAPI = ApiProvider.getInstance().create(ServerAPI.class);
             serverAPI.joinPost(MainActivity.token, MainAdapter.pos).enqueue(new Callback<ServerRequest>() {
@@ -76,10 +73,10 @@ public class SeeActivity extends AppCompatActivity {
                 public void onFailure(Call<ServerRequest> call, Throwable t) {
                 }
             });
-            Toast.makeText(SeeActivity.this, "성공적으로 파티에 참여하셨습니다!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SeeActivity.this, "성공적으로 파티에 참여하셨습니다!\n새로고침을 하여 변경사항을 저장해주세요.", Toast.LENGTH_SHORT).show();
         }
-        else if(i == 1) {
-            i = 0;
+        else if(PostData.overlap[MainAdapter.pos] == 1) {
+            PostData.overlap[MainAdapter.pos] = 0;
             tv_join.setText("참여 하기");
             ServerAPI serverAPI = ApiProvider.getInstance().create(ServerAPI.class);
             serverAPI.enterDelete(MainActivity.token, MainAdapter.pos).enqueue(new Callback<ServerResponse>() {
@@ -90,7 +87,7 @@ public class SeeActivity extends AppCompatActivity {
                 public void onFailure(Call call, Throwable t) {
                 }
             });
-            Toast.makeText(SeeActivity.this,"성공적으로 파티에서 탈퇴 하셨습니다!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SeeActivity.this,"성공적으로 파티에서 탈퇴 하셨습니다!\n새로고침을 하여 변경사항을 저장해주세요!", Toast.LENGTH_SHORT).show();
         }
     }
 }
