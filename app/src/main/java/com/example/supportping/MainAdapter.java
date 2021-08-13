@@ -39,10 +39,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
     public void onBindViewHolder(@NonNull MainAdapter.CustomViewHolder holder, int position) {
 
         holder.tv_title.setText(arraylist.get(position).getTitle());
-        holder.tv_nickname.setText(arraylist.get(position).getNickname());
+        holder.tv_nickname.setText("글쓴이 : " + arraylist.get(position).getNickname());
         holder.tv_place.setText(arraylist.get(position).getPlace());
         holder.tv_mp.setText("인원 : " + arraylist.get(position).getMp());
-        holder.tv_id.setText(arraylist.get(position).getId());
+        holder.tv_id.setText("Feed ID : " + arraylist.get(position).getId());
 
         holder.btn_check.setOnClickListener(new View.OnClickListener() {
             @Override
