@@ -163,7 +163,6 @@ public class HomeActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ServerResponse> call, Throwable t) {
-                System.out.println("실패");
             }
         });
 
