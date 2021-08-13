@@ -2,6 +2,7 @@ package com.example.supportping;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,11 @@ public class MyPostActivity extends AppCompatActivity {
     Button btn_edit;
     Button btn_delete;
 
+    public static boolean editStatus;
+    public static String editTitle;
+    public static String editContent;
+    public static int  editId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +50,6 @@ public class MyPostActivity extends AppCompatActivity {
         tv_myPlace = (TextView) findViewById(R.id.tv_myPlace);
         tv_myPpmp = (TextView) findViewById(R.id.tv_myPpmp);
 
-        tv_myTitle.setText(PostData.title[MainAdapter.pos]);
-        tv_myContent.setText(PostData.content[MainAdapter.pos]);
-        tv_myPlace.setText(PostData.place[MainAdapter.pos]);
-        tv_myPpmp.setText(PostData.pp[MainAdapter.pos] + " / " + PostData.mp[MainAdapter.pos]);
-
         btn_delete = (Button) findViewById(R.id.btn_delete);
         btn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +57,32 @@ public class MyPostActivity extends AppCompatActivity {
                 deletePost();
             }
         });
+
+        btn_edit = (Button) findViewById(R.id.btn_edit);
+        btn_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editPost();
+            }
+        });
+    }
+
+    protected void onResume() {
+        super.onResume();
+
+        tv_myTitle.setText(PostData.title[MainAdapter.pos]);
+        tv_myContent.setText(PostData.content[MainAdapter.pos]);
+        tv_myPlace.setText(PostData.place[MainAdapter.pos]);
+        tv_myPpmp.setText(PostData.pp[MainAdapter.pos] + " / " + PostData.mp[MainAdapter.pos]);
+    }
+
+    private void editPost() {
+        editTitle = PostData.title[MainAdapter.pos];
+        editContent = PostData.content[MainAdapter.pos];
+
+        editId = MainAdapter.pos;
+
+        startActivity(new Intent(MyPostActivity.this, PostEditActivity.class));
     }
 
     private void deletePost() {
@@ -69,6 +96,7 @@ public class MyPostActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<ServerRequest> call, Throwable t) { }
         });
+
         Toast.makeText(MyPostActivity.this, "게시글 삭제가 완료되었습니다.", Toast.LENGTH_SHORT).show();
         finish();
     }
