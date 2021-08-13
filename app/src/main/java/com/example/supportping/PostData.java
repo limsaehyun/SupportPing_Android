@@ -8,4 +8,5 @@ public class PostData {
     public static String[] place = new String[10000];
     public static String[] pp = new String[10000];
     public static String[] mp = new String[10000];
+    public static int[] overlap = new int[10000];
 }
