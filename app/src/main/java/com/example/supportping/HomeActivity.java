@@ -22,6 +22,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -65,6 +66,10 @@ public class HomeActivity extends AppCompatActivity {
 
                 if(id == R.id.myPage) {
                     startActivity(new Intent(HomeActivity.this, MyPageActivity.class));
+                } else if(id == R.id.makeParty) {
+                    startActivity(new Intent(HomeActivity.this, PostActivity.class));
+                } else if(id == R.id.joinParty) {
+                    startActivity(new Intent(HomeActivity.this, JoinParty.class));
                 }
 
                 return true;
@@ -114,7 +119,11 @@ public class HomeActivity extends AppCompatActivity {
             String startpp = jsonObject.get("pp").toString();
             String startmp = jsonObject.get("mp").toString();
 
+            JsonObject startUser = (JsonObject) jsonObject.get("user");
+            String startName = startUser.get("name").toString();
+
             int Id = Integer.parseInt(startId);
+            PostData.name[Id] = startName;
             PostData.id[Id] = startId;
             PostData.title[Id] = startTitle;
             PostData.content[Id] = startContent;
@@ -122,7 +131,7 @@ public class HomeActivity extends AppCompatActivity {
             PostData.pp[Id] = startpp;
             PostData.mp[Id] = startmp;
 
-            MainData mainData = new MainData(startTitle, "1315 임세현", startPlace, startmp, startId);
+            MainData mainData = new MainData(startTitle, startName, startPlace, startmp, startId);
             arrayList.add(mainData);
 
             mainAdapter.notifyDataSetChanged();
