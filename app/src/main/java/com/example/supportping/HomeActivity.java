@@ -122,6 +122,10 @@ public class HomeActivity extends AppCompatActivity {
             JsonObject startUser = (JsonObject) jsonObject.get("user");
             String startName = startUser.get("name").toString();
 
+            startTitle = startTitle.replaceAll("\"", "");
+            startContent = startContent.replaceAll("\"", "");
+            startContent = startContent.replaceAll("\\\\n" , "\n");
+
             int Id = Integer.parseInt(startId);
             PostData.name[Id] = startName;
             PostData.id[Id] = startId;
