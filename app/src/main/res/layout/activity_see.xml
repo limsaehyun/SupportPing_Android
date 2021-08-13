@@ -24,7 +24,7 @@
 
         <ImageButton
             android:background="@android:color/transparent"
-            android:id="@+id/ib_back"
+            android:id="@+id/ib_Back"
             android:layout_marginLeft="20dp"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
