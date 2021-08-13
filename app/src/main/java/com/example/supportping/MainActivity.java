@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private ServerAPI serverAPI;
 
     public static String token;
-    public static int user_id = 6;
+    public static int user_id; // 임시값
     public static String username;
     public static String password;
 
@@ -104,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
                     if(response.code() == 200) {
                         Toast.makeText(MainActivity.this, username + "님 환영합니다.", Toast.LENGTH_SHORT).show();
                         token = response.body().getToken();
+                        user_id = response.body().getUser_id();
+                        System.out.println("id" + user_id);
 
                         startActivity(new Intent(MainActivity.this, HomeActivity.class));
                     }
@@ -118,7 +120,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponseLogin> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "예기치 못한 오류가 발생했습니다.\n고객센터에 문의해주세요.", Toast.LENGTH_SHORT).show();
             }
         });
 
