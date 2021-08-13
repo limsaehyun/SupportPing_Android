@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SupportPing"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MyPostActivity"></activity>
+        <activity android:name=".PostEditActivity"></activity>
+        <activity android:name=".MyPostActivity" />
         <activity android:name=".JoinParty" />
         <activity android:name=".SeeActivity" />
         <activity android:name=".PostActivity" />
