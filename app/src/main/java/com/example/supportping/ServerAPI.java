@@ -29,4 +29,7 @@ public interface ServerAPI {
     @POST("user/enter/{board-id}") // 파티 참여
     Call<ServerRequest> joinPost(@Header("Authorization") String token, @Path("board-id") int board_id);
 
+    @GET("user/me/{user-id}") // 게시글 조회
+    Call<ServerResponse> seePost(@Header("Authorization") String token, @Path("user-id") int user_id);
+
 }
