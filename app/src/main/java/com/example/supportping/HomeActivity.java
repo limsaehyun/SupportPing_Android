@@ -88,7 +88,7 @@ public class HomeActivity extends AppCompatActivity {
 
         arrayList = new ArrayList<>();
 
-        mainAdapter = new MainAdapter(arrayList, getApplicationContext());
+        mainAdapter = new MainAdapter(arrayList, getApplicationContext(), "HomeActivity");
         recyclerView.setAdapter(mainAdapter);
 
         ib_add = (ImageButton) findViewById(R.id.ib_add);
