@@ -131,10 +131,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="30dp"
-            android:text="최소 인원"
+            android:text="최대 인원"
             android:textColor="#70040303"
-            android:textSize="22dp">
-        </TextView>
+            android:textSize="22dp"></TextView>
 
         <TextView
             android:id="@+id/people"
