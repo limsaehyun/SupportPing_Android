@@ -40,5 +40,8 @@ public interface ServerAPI {
     @DELETE("user/delete/{board-id}") // 게시글 삭제
     Call<ServerRequest> deletePost(@Header("Authorization") String token, @Path("board-id") int board_id);
 
+    @DELETE("/user/exit/{board-id}") // 게시글 탈퇴
+    Call<ServerResponse> enterDelete(@Header("Authorization") String token, @Path("board-id") int board_id);
+
 
 }
