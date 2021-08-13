@@ -28,7 +28,7 @@ public class SeeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_see);
 
-        ib_back = (ImageButton) findViewById(R.id.ib_back);
+        ib_back = (ImageButton) findViewById(R.id.ib_Back);
         ib_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
