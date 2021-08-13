@@ -69,7 +69,7 @@ public class MyPageActivity extends AppCompatActivity {
             String startpp = jsonObject.get("pp").toString();
             String startmp = jsonObject.get("mp").toString();
 
-            MainData mainData = new MainData(startTitle, "1315 임세현", startPlace, startmp, startId);
+            MainData mainData = new MainData(startTitle, "나", startPlace, startmp, startId);
             arrayList.add(mainData);
 
             mainAdapter.notifyDataSetChanged();
