@@ -63,14 +63,14 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
         return (null != arraylist ? arraylist.size() : 0);
     }
 
-    public void remove(int position) {
-        try {
-            arraylist.remove(position);
-            notifyItemRemoved(position);
-        } catch (IndexOutOfBoundsException ex) {
-            ex.printStackTrace();
-        }
-    }
+//    public void remove(int position) {
+//        try {
+//            arraylist.remove(position);
+//            notifyItemRemoved(position);
+//        } catch (IndexOutOfBoundsException ex) {
+//            ex.printStackTrace();
+//        }
+//    }
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {
 
