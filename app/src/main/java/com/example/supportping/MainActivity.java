@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private ServerAPI serverAPI;
 
     public static String token;
-
+    public static int user_id = 6;
     public static String username;
     public static String password;
 
