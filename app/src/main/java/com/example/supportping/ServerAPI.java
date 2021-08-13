@@ -3,6 +3,7 @@ package com.example.supportping;
 import java.util.Map;
 
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -32,4 +33,6 @@ public interface ServerAPI {
     @GET("user/me/{user-id}") // 게시글 조회
     Call<ServerResponse> seePost(@Header("Authorization") String token, @Path("user-id") int user_id);
 
+    @DELETE("user/delete/{board-id}") // 게시글 삭제
+    Call<ServerRequest> deletePost(@Header("Authorization") String token, @Path("board-id") int board_id);
 }
