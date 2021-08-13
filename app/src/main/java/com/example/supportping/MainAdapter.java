@@ -18,10 +18,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
     Context Ctx;
     ArrayList<MainData> arraylist;
     public static int pos;
+    String activity;
 
-    public MainAdapter(ArrayList<MainData> arraylist, Context Ctx) { // 생성자
+    public MainAdapter(ArrayList<MainData> arraylist, Context Ctx, String activity) {
         this.arraylist = arraylist;
         this.Ctx = Ctx;
+        this.activity = activity;
     }
 
     @NonNull
@@ -45,8 +47,13 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
         holder.btn_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pos = Integer.parseInt(arraylist.get(position).getId());
-                v.getContext().startActivity(new Intent(v.getContext(), SeeActivity.class));
+                if(activity.equals("HomeActivity")) {
+                    pos = Integer.parseInt(arraylist.get(position).getId());
+                    v.getContext().startActivity(new Intent(v.getContext(), SeeActivity.class));
+                } else if(activity.equals("MyPageActivity")) {
+                    pos = Integer.parseInt(arraylist.get(position).getId());
+                    v.getContext().startActivity(new Intent(v.getContext(), MyPostActivity.class));
+                }
             }
         });
     }
