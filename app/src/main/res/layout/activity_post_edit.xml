@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="7.5dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_arrow_back_24">
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="-0.5dp"
+            android:fontFamily="@font/bmhanna"
+            android:text="도움 요청 글쓰기"
+            android:textColor="@color/black"
+            android:textSize="30dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/PostButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-1.5dp"
+            android:text="완료"
+            android:textColor="#E66363"
+            android:textSize="25dp">
+        </TextView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#70040303">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="320dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="#00FFFFFF"
+            android:hint="  제목"
+            android:textSize="20dp">
+        </EditText>
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="#70040303">
+        </View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/NowLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text=""
+            android:textSize="15dp">
+        </TextView>
+        <Spinner
+            android:id="@+id/floor"
+            android:layout_width="95dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="8dp"
+            android:entries="@array/floor"
+            android:spinnerMode="dropdown">
+        </Spinner>
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:hint="위치 입력">
+        </EditText>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#F16A58"
+            android:text="입력"
+            android:layout_marginLeft="10dp"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#70040303">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text="최소 인원"
+            android:textColor="#70040303"
+            android:textSize="22dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text=""
+            android:textColor="#70040303"
+            android:textSize="18dp">
+        </TextView>
+
+        <Spinner
+            android:id="@+id/person"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:entries="@array/person"
+            android:spinnerMode="dropdown">
+        </Spinner>
+    </LinearLayout>
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#70040303">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:id="@+id/content"
+            android:layout_width="320dp"
+            android:layout_height="330dp"
+            android:layout_gravity="center"
+            android:hint="게시글 내용을 작성해주세요."
+            android:background="@drawable/et_line"
+            android:ems="10"
+            android:gravity="top">
+        </EditText>
+    </LinearLayout>
+</LinearLayout>
