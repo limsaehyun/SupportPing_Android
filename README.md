@@ -1,6 +1,6 @@
 ## DSMSupportPing
 
-DMS 동아리 프로젝트
+Team Project
 
 * email address : sh007100@naver.com
 * Demo Video : https://www.youtube.com/watch?v=_pcPiskwwgY
