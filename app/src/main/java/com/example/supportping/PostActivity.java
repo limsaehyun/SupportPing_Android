@@ -103,10 +103,10 @@ public class PostActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void pushPost() {
+
         String title = this.title.getText().toString();
         String content = this.content.getText().toString();
         String nowLocation = NowLocation.getText().toString();
@@ -125,7 +125,6 @@ public class PostActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ServerRequest> call, Throwable t) {
-                Toast.makeText(PostActivity.this, "예기치 못한 오류로 인해 게시글 등록에 실패하였습니다.", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
