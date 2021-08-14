@@ -4,7 +4,7 @@ DMS 동아리 프로젝트
 
 * email address : sh007100@naver.com
 * Demo Video : https://www.youtube.com/watch?v=_pcPiskwwgY
-* Development Date : 2021.08.13
+* development date : 2021.08.13
 
   
 
@@ -64,7 +64,7 @@ DMS 동아리 프로젝트
 
 
 
-### ibraries
+### Libraries
 
 ---
 
