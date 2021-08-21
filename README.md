@@ -86,6 +86,5 @@ Team Project
 <img src="https://user-images.githubusercontent.com/80076029/129440115-45ff035f-5f30-4438-ba75-fbdd7d018302.png" width="180px" height="320px" title="Choose" alt="Choose"></img>
 <img src="https://user-images.githubusercontent.com/80076029/129440116-13ecbf32-5a47-4731-9b7c-9dd92283b036.png" width="180px" height="320px" title="Play" alt="Play"></img>
 <img src="https://user-images.githubusercontent.com/80076029/129440118-6733ac27-4d6e-470d-9bc9-22441bfd96a2.png" width="180px" height="320px" title="Main" alt="Main"></img>
-<img src="https://user-images.githubusercontent.com/80076029/129440121-3698fa8d-7c6a-4eb5-8505-60bdfa9a418e.png" width="180px" height="320px" title="Choose" alt="Choose"></img>
 <img src="https://user-images.githubusercontent.com/80076029/129440124-16983187-1b65-478a-b7a0-d8b32df084a7.png" width="180px" height="320px" title="Play" alt="Play"></img>
 
