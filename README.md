@@ -5,6 +5,7 @@ Team Project
 * email address : sh007100@naver.com
 * Demo Video : https://www.youtube.com/watch?v=_pcPiskwwgY
 * development date : 2021.08.13
+* Backend code : https://github.com/softpeanut/SupportPing_Backend
 
   
 
